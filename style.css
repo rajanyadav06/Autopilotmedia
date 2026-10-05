@@ -3659,7 +3659,8 @@ input[type="range"]::-moz-range-thumb {
   transform: translateY(-4px);
 }
 
-.social-icon.facebook svg {
+.social-icon.facebook svg,
+.social-icon.youtube svg {
   fill: currentColor;
   stroke: none;
 }
