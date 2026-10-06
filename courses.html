@@ -959,16 +959,33 @@
        MOBILE
     ========================= */
 
-    @media(max-width: 950px) {
+    @media(max-width: 1024px) {
 
-      .nav-menu,
-      .nav-cta .btn {
-        display: none;
+      .nav-menu {
+        display: none !important;
       }
 
       .mobile-menu-btn {
-        display: flex;
+        display: flex !important;
       }
+
+      .nav-cta {
+        display: flex !important;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .nav-cta .btn {
+        display: inline-flex !important;
+        padding: 8px 18px;
+        font-size: 13px;
+      }
+
+    @media(max-width: 640px) {
+      .nav-cta .btn {
+        display: none !important;
+      }
+    }
 
       .courses-grid {
         grid-template-columns: 1fr;

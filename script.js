@@ -67,6 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
+
+    // Close drawer when clicking outside on tablet/desktop viewports
+    document.addEventListener('click', (e) => {
+      if (mobileDrawer.classList.contains('open')) {
+        if (!mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          toggleMobileMenu();
+        }
+      }
+    });
   }
 
   // Mobile Services Accordion Toggle
