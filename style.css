@@ -1,9 +1,5 @@
-/* ==========================================================================
-   Autopilot Media — Production Design System & Stylesheet
-   Inspired by Reference 1 (High-Contrast D2C Performance Agency UI/UX)
-   ========================================================================== */
 
-/* --- 1. CSS Custom Properties / Design Tokens --- */
+
 :root {
   --black: #050505;
   --near-black: #0a0a0a;
@@ -44,7 +40,6 @@
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- 2. Reset & Base Styles --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -89,7 +84,6 @@ button {
   background: none;
 }
 
-/* --- 3. Container & Layout Utilities --- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -104,7 +98,6 @@ button {
   position: relative;
 }
 
-/* Section Themes */
 .section-dark {
   background-color: var(--black);
   color: var(--white);
@@ -120,7 +113,6 @@ button {
   color: var(--black);
 }
 
-/* Typography Scale */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -186,7 +178,6 @@ button {
   color: #555555;
 }
 
-/* Highlight pills & text */
 .highlight-pill {
   background-color: var(--lime);
   color: var(--black);
@@ -208,7 +199,6 @@ button {
   color: var(--lime);
 }
 
-/* Button System */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -277,7 +267,6 @@ button {
   font-weight: 700;
 }
 
-/* --- 4. Navigation Bar --- */
 .navbar {
   position: fixed;
   top: 0;
@@ -356,9 +345,6 @@ button {
   width: 100%;
 }
 
-/* ==========================================================================
-   Mega Menu & Dropdown Navigation Styles
-   ========================================================================== */
 .nav-item-dropdown {
   position: static;
 }
@@ -392,7 +378,6 @@ button {
   width: 100%;
 }
 
-/* Floating Mega Menu Container */
 .mega-menu {
   position: absolute;
   top: calc(100% + 4px);
@@ -416,7 +401,6 @@ button {
   z-index: 1050;
 }
 
-/* Generous bridge between navbar and mega menu so hover never drops */
 .mega-menu::before {
   content: '';
   position: absolute;
@@ -437,7 +421,6 @@ button {
   transition-delay: 0s;
 }
 
-/* 3-Column Grid Layout (3 / 3 / 2) */
 .mega-menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -473,7 +456,6 @@ button {
   box-shadow: 0 0 6px var(--lime);
 }
 
-/* Service Item Card */
 .mega-menu-card {
   display: flex;
   align-items: flex-start;
@@ -570,7 +552,6 @@ button {
   transform: translateX(0);
 }
 
-/* Enterprise Growth Highlight Card in Col 3 */
 .mega-feature-card {
   padding: 12px 14px;
   border-radius: 10px;
@@ -633,7 +614,6 @@ button {
   gap: 4px;
 }
 
-/* Mobile Accordion & Submenu */
 .mobile-dropdown-toggle {
   width: 100%;
   display: flex;
@@ -750,7 +730,6 @@ button {
   background-color: var(--lime);
 }
 
-/* Mobile Nav Drawer */
 .mobile-nav-drawer {
   position: fixed;
   top: 0;
@@ -806,7 +785,6 @@ button {
   gap: 16px;
 }
 
-/* --- 5. Hero Section --- */
 .hero-section,
 .service-hero {
   padding-top: 170px;
@@ -856,9 +834,6 @@ button {
   }
 }
 
-
-
-/* --- 6. Clients Logo Slider (Infinite Marquee) --- */
 .clients-section {
   padding: 50px 0;
   background-color: var(--near-black);
@@ -957,7 +932,6 @@ button {
   border-radius: 50%;
 }
 
-/* --- 7. About Us Section --- */
 .about-section {
   background-color: var(--off-white);
   color: var(--black);
@@ -1085,7 +1059,6 @@ button {
   color: #333;
 }
 
-/* --- 8. Calculator / Live Simulator Section --- */
 .calculator-section {
   background-color: var(--near-black);
   border-bottom: 1px solid var(--border-dark);
@@ -1143,7 +1116,6 @@ button {
   border-radius: var(--radius-full);
 }
 
-/* Range input styling */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -1189,7 +1161,6 @@ input[type="range"]::-moz-range-thumb {
   color: #666;
 }
 
-/* Calculator Outputs Card */
 .calc-outputs {
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -1249,7 +1220,6 @@ input[type="range"]::-moz-range-thumb {
   color: var(--white);
 }
 
-/* Comparison Bar Graph */
 .calc-comparison {
   display: flex;
   flex-direction: column;
@@ -1297,25 +1267,21 @@ input[type="range"]::-moz-range-thumb {
   margin-top: 8px;
 }
 
-/* --- 9. Our Services Section --- */
 .services-section {
   background-color: var(--off-white);
   color: var(--black);
   border-bottom: 1px solid var(--border-light);
 
-  /* Reduce top and bottom spacing */
   padding-top: 60px;
   padding-bottom: 70px;
 }
 
-/* Services Heading */
 .services-section .section-title {
   text-align: center;
   margin: 0 auto 12px;
   max-width: 850px;
 }
 
-/* Services Paragraph */
 .services-section .section-subtitle {
   text-align: center;
   margin: 0 auto 28px;
@@ -1323,19 +1289,13 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.6;
 }
 
-/* Services Cards */
 .services-grid {
   margin-top: 25px;
 }
 
-/* Service Card */
 .service-card {
   padding: 28px;
 }
-
-/* =========================
-   SERVICES GRID
-========================= */
 
 .services-grid {
   display: grid;
@@ -1343,11 +1303,6 @@ input[type="range"]::-moz-range-thumb {
   gap: 24px;
   margin-top: 25px;
 }
-
-
-/* =========================
-   SERVICE CARD
-========================= */
 
 .service-card {
   background-color: var(--white);
@@ -1375,22 +1330,12 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
 }
 
-
-/* =========================
-   CARD TOP
-========================= */
-
 .service-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
-
-/* =========================
-   SERVICE NUMBER
-========================= */
 
 .service-num {
   font-size: 13px;
@@ -1403,11 +1348,6 @@ input[type="range"]::-moz-range-thumb {
   padding: 4px 10px;
   border-radius: var(--radius-xs);
 }
-
-
-/* =========================
-   SERVICE ICON
-========================= */
 
 .service-icon-box {
   width: 44px;
@@ -1432,11 +1372,6 @@ input[type="range"]::-moz-range-thumb {
   color: var(--lime);
 }
 
-
-/* =========================
-   SERVICE TITLE
-========================= */
-
 .service-title {
   font-size: 22px;
   font-weight: 800;
@@ -1447,22 +1382,12 @@ input[type="range"]::-moz-range-thumb {
   color: var(--black);
 }
 
-
-/* =========================
-   SERVICE DESCRIPTION
-========================= */
-
 .service-desc {
   font-size: 15px;
   line-height: 1.6;
 
   color: #555555;
 }
-
-
-/* =========================
-   CARD BOTTOM
-========================= */
 
 .service-card-bottom {
   margin-top: 20px;
@@ -1476,11 +1401,6 @@ input[type="range"]::-moz-range-thumb {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-
-/* =========================
-   LEARN MORE
-========================= */
-
 .service-learn-more {
   font-size: 13px;
   font-weight: 700;
@@ -1492,11 +1412,6 @@ input[type="range"]::-moz-range-thumb {
 
   gap: 6px;
 }
-
-
-/* =========================
-   ARROW
-========================= */
 
 .service-arrow {
   width: 20px;
@@ -1513,27 +1428,19 @@ input[type="range"]::-moz-range-thumb {
   transform: translateX(5px);
 }
 
-
-/* =========================
-   MOBILE DEVICE
-========================= */
-
 @media (max-width: 768px) {
 
-  /* Services section */
   .services-section {
     padding-top: 45px;
     padding-bottom: 55px;
   }
 
-  /* Heading */
   .services-section .section-title {
     text-align: center;
     margin-bottom: 10px;
     padding: 0 12px;
   }
 
-  /* Paragraph */
   .services-section .section-subtitle {
     text-align: center;
     margin-bottom: 22px;
@@ -1541,59 +1448,46 @@ input[type="range"]::-moz-range-thumb {
     line-height: 1.55;
   }
 
-  /* Cards become single column */
   .services-grid {
     grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 18px;
   }
 
-  /* Mobile card */
   .service-card {
     padding: 22px 20px;
     min-height: auto;
     border-radius: 18px;
   }
 
-  /* Card top */
   .service-card-top {
     margin-bottom: 18px;
   }
 
-  /* Icon */
   .service-icon-box {
     width: 40px;
     height: 40px;
   }
 
-  /* Title */
   .service-title {
     font-size: 20px;
     margin-bottom: 8px;
   }
 
-  /* Description */
   .service-desc {
     font-size: 14px;
     line-height: 1.55;
   }
 
-  /* Bottom */
   .service-card-bottom {
     margin-top: 18px;
     padding-top: 13px;
   }
 
-  /* Learn more */
   .service-learn-more {
     font-size: 12px;
   }
 }
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
 
 @media (max-width: 480px) {
 
@@ -1629,7 +1523,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* --- 10. Our Framework Section --- */
 .framework-section {
   background-color: var(--black);
   color: var(--white);
@@ -1695,11 +1588,6 @@ input[type="range"]::-moz-range-thumb {
   font-size: 18px;
   opacity: 0.6;
 }
-
-/* --- 11. Why Brands Fail Section --- */
-/* =========================
-   WHY BRANDS FAIL SECTION
-========================= */
 
 .fail-section .reveal {
   text-align: center;
@@ -1768,7 +1656,6 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.55;
 }
 
-/* --- 12. Why Choose Us Section --- */
 .choose-section {
   background-color: var(--near-black);
   color: var(--white);
@@ -1837,7 +1724,6 @@ input[type="range"]::-moz-range-thumb {
   color: #888888;
 }
 
-/* Mini Preview Widget in Choose section */
 .choose-preview-card {
   background: var(--dark-surface);
   border: 1px solid var(--border-dark);
@@ -1899,7 +1785,6 @@ input[type="range"]::-moz-range-thumb {
   text-transform: uppercase;
 }
 
-/* --- 13. Testimonials Section --- */
 .testimonials-section {
   background-color: var(--off-white);
   color: var(--black);
@@ -2016,7 +1901,6 @@ input[type="range"]::-moz-range-thumb {
   border-radius: var(--radius-full);
 }
 
-/* --- 14. CTA Section --- */
 .cta-section {
   background: radial-gradient(circle at 50% 50%, rgba(200, 255, 0, 0.12) 0%, transparent 70%),
               var(--black);
@@ -2056,7 +1940,6 @@ input[type="range"]::-moz-range-thumb {
   gap: 18px;
 }
 
-/* --- 15. FAQ Section --- */
 .faq-section {
   background-color: var(--off-white);
   color: var(--black);
@@ -2131,7 +2014,6 @@ input[type="range"]::-moz-range-thumb {
   padding-bottom: 24px;
 }
 
-/* --- 16. Footer --- */
 .footer {
   background-color: var(--black);
   color: var(--white);
@@ -2226,7 +2108,6 @@ input[type="range"]::-moz-range-thumb {
   color: var(--white);
 }
 
-/* --- 17. Scroll Reveal Animation Classes --- */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -2238,7 +2119,6 @@ input[type="range"]::-moz-range-thumb {
   transform: translateY(0);
 }
 
-/* --- 18. Responsive Media Queries --- */
 @media (max-width: 1199px) {
   .section {
     padding-top: 90px;
@@ -2255,7 +2135,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* Small Laptop Screen Navbar Tuning (1025px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
   .nav-menu {
     gap: 16px;
@@ -2273,7 +2152,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* Tablet & Medium Screen Navbar Responsiveness (up to 1024px) */
 @media (max-width: 1024px) {
   .nav-menu {
     display: none !important;
@@ -2381,7 +2259,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -2399,11 +2276,6 @@ input[type="range"]::-moz-range-thumb {
     transform: none !important;
   }
 }
-
-
-/* =========================================================
-   SEPARATE ABOUT PAGE
-========================================================= */
 
 .about-page-hero {
   padding-top: 150px;
@@ -2496,11 +2368,6 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.7;
   font-size: 14px;
 }
-
-
-/* =========================================================
-   CONTACT PAGE
-========================================================= */
 
 .contact-page-hero {
   padding-top: 150px;
@@ -2664,19 +2531,9 @@ input[type="range"]::-moz-range-thumb {
   margin: 0;
 }
 
-
-/* =========================================================
-   ACTIVE NAV LINK
-========================================================= */
-
 .nav-link.active {
   color: var(--white);
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 768px) {
 
@@ -2738,10 +2595,6 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-/* =========================================
-   ABOUT PAGE - AUTOPILOT MEDIA
-========================================= */
-
 .about-page-hero {
   padding-top: 155px;
   padding-bottom: 120px;
@@ -2758,9 +2611,6 @@ input[type="range"]::-moz-range-thumb {
   margin-right: auto;
   max-width: 720px;
 }
-
-
-/* WHO WE ARE */
 
 .about-story-page {
   padding-top: 110px;
@@ -2785,9 +2635,6 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 20px;
 }
 
-
-/* CENTERED SECTION HEADING */
-
 .about-centered-heading {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -2798,9 +2645,6 @@ input[type="range"]::-moz-range-thumb {
   margin-left: auto;
   margin-right: auto;
 }
-
-
-/* VALUES / TEAM */
 
 .about-values-grid {
   display: grid;
@@ -2840,9 +2684,6 @@ input[type="range"]::-moz-range-thumb {
   font-size: 14px;
 }
 
-
-/* FOUNDER */
-
 .founder-section {
   padding-top: 110px;
   padding-bottom: 110px;
@@ -2858,9 +2699,6 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 10px;
   line-height: 1.6;
 }
-
-
-/* DIFFERENCES */
 
 .about-difference-grid {
   display: grid;
@@ -2890,9 +2728,6 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.4;
 }
 
-
-/* MISSION / VISION */
-
 .mission-vision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2917,9 +2752,6 @@ input[type="range"]::-moz-range-thumb {
   font-size: 15px;
   line-height: 1.8;
 }
-
-
-/* MOBILE */
 
 @media (max-width: 768px) {
 
@@ -2979,17 +2811,10 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-/* =========================================
-   FOUNDERS SECTION
-========================================= */
-
 .founders-section {
   padding-top: 110px;
   padding-bottom: 120px;
 }
-
-
-/* TOP HEADING */
 
 .founders-heading {
   max-width: 850px;
@@ -3008,9 +2833,6 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.7;
 }
 
-
-/* CARDS GRID */
-
 .founders-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3018,9 +2840,6 @@ input[type="range"]::-moz-range-thumb {
   max-width: 1050px;
   margin: 0 auto;
 }
-
-
-/* CARD */
 
 .founder-card {
   background: #fff;
@@ -3037,9 +2856,6 @@ input[type="range"]::-moz-range-thumb {
   border-color: rgba(0,0,0,.16);
   box-shadow: 0 25px 60px rgba(0,0,0,.10);
 }
-
-
-/* IMAGE */
 
 .founder-image-wrapper {
   width: 100%;
@@ -3060,9 +2876,6 @@ input[type="range"]::-moz-range-thumb {
 .founder-card:hover .founder-image {
   transform: scale(1.04);
 }
-
-
-/* CONTENT */
 
 .founder-card-content {
   padding: 32px;
@@ -3109,9 +2922,6 @@ input[type="range"]::-moz-range-thumb {
   color: var(--black);
 }
 
-
-/* SOCIAL LINKS */
-
 .founder-social {
   display: flex;
   gap: 10px;
@@ -3139,11 +2949,6 @@ input[type="range"]::-moz-range-thumb {
   color: var(--white);
   border-color: var(--black);
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 768px) {
 
@@ -3204,10 +3009,6 @@ input[type="range"]::-moz-range-thumb {
   }
 
 }
-
-/* =========================================
-   LOCATION / MAP SECTION
-========================================= */
 
 .location-section {
   padding-top: 10px;
@@ -3291,11 +3092,6 @@ input[type="range"]::-moz-range-thumb {
   text-decoration: underline;
 }
 
-
-/* =========================================
-   LOCATION MOBILE
-========================================= */
-
 @media (max-width: 768px) {
 
   .location-section {
@@ -3338,7 +3134,6 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-
 @media (max-width: 480px) {
 
   .location-map-wrapper iframe {
@@ -3352,10 +3147,6 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-/* =========================================
-   KEY PEOPLE SECTION
-========================================= */
-
 .people-section {
   width: 100%;
   background: #000;
@@ -3367,9 +3158,6 @@ input[type="range"]::-moz-range-thumb {
   width: min(1120px, calc(100% - 80px));
   margin: 0 auto;
 }
-
-
-/* HEADING */
 
 .people-heading {
   text-align: center;
@@ -3396,24 +3184,15 @@ input[type="range"]::-moz-range-thumb {
   text-transform: uppercase;
 }
 
-
-/* GRID */
-
 .people-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 70px;
 }
 
-
-/* CARD */
-
 .person-card {
   width: 100%;
 }
-
-
-/* IMAGE */
 
 .person-image-wrapper {
   width: 100%;
@@ -3443,9 +3222,6 @@ input[type="range"]::-moz-range-thumb {
   transform: scale(1.035);
   filter: brightness(1);
 }
-
-
-/* CONTENT */
 
 .person-content {
   padding-top: 28px;
@@ -3492,11 +3268,6 @@ input[type="range"]::-moz-range-thumb {
 
   color: #858585;
 }
-
-
-/* =========================================
-   SOCIAL MEDIA
-========================================= */
 
 .person-social {
   display: flex;
@@ -3554,11 +3325,6 @@ input[type="range"]::-moz-range-thumb {
   stroke: none;
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 900px) {
 
   .people-section {
@@ -3589,11 +3355,6 @@ input[type="range"]::-moz-range-thumb {
     font-size: 27px;
   }
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 650px) {
 
@@ -3660,11 +3421,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
 @media (max-width: 420px) {
 
   .people-container {
@@ -3688,10 +3444,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* =========================================
-   PORTFOLIO PAGE
-========================================= */
-
 .portfolio-page-hero {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -3708,11 +3460,6 @@ input[type="range"]::-moz-range-thumb {
   margin-right: auto;
   max-width: 680px;
 }
-
-
-/* =========================================
-   PORTFOLIO INTRO
-========================================= */
 
 .portfolio-intro {
   padding-top: 100px;
@@ -3736,11 +3483,6 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.7;
 }
 
-
-/* =========================================
-   PORTFOLIO GRID
-========================================= */
-
 .portfolio-grid {
   display: grid;
 
@@ -3753,11 +3495,6 @@ input[type="range"]::-moz-range-thumb {
 
   margin: 0 auto;
 }
-
-
-/* =========================================
-   PORTFOLIO CARD
-========================================= */
 
 .portfolio-card {
   background: var(--white);
@@ -3783,19 +3520,9 @@ input[type="range"]::-moz-range-thumb {
     0 22px 55px rgba(0, 0, 0, 0.09);
 }
 
-
-/* =========================================
-   LARGE CARD
-========================================= */
-
 .portfolio-card-large {
   grid-column: span 2;
 }
-
-
-/* =========================================
-   PORTFOLIO IMAGE
-========================================= */
 
 .portfolio-image {
   position: relative;
@@ -3815,11 +3542,6 @@ input[type="range"]::-moz-range-thumb {
       #343434
     );
 }
-
-
-/* =========================================
-   IMAGE VARIATIONS
-========================================= */
 
 .portfolio-image-one {
   background:
@@ -3866,11 +3588,6 @@ input[type="range"]::-moz-range-thumb {
     );
 }
 
-
-/* =========================================
-   CATEGORY
-========================================= */
-
 .portfolio-category {
   position: absolute;
 
@@ -3895,11 +3612,6 @@ input[type="range"]::-moz-range-thumb {
 
   letter-spacing: 0.12em;
 }
-
-
-/* =========================================
-   PLACEHOLDER VISUAL
-========================================= */
 
 .portfolio-placeholder {
   display: flex;
@@ -3933,11 +3645,6 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: -0.04em;
 }
 
-
-/* =========================================
-   CARD CONTENT
-========================================= */
-
 .portfolio-card-content {
   padding: 28px 30px;
 
@@ -3949,11 +3656,6 @@ input[type="range"]::-moz-range-thumb {
 
   gap: 25px;
 }
-
-
-/* =========================================
-   NUMBER
-========================================= */
 
 .portfolio-number {
   display: block;
@@ -3969,11 +3671,6 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: 0.1em;
 }
 
-
-/* =========================================
-   TITLE
-========================================= */
-
 .portfolio-card-content h3 {
   margin: 0 0 9px;
 
@@ -3988,11 +3685,6 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: -0.025em;
 }
 
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
 .portfolio-card-content p {
   margin: 0;
 
@@ -4004,11 +3696,6 @@ input[type="range"]::-moz-range-thumb {
 
   line-height: 1.65;
 }
-
-
-/* =========================================
-   ARROW
-========================================= */
 
 .portfolio-arrow {
   width: 40px;
@@ -4043,20 +3730,10 @@ input[type="range"]::-moz-range-thumb {
   transform: translateX(4px);
 }
 
-
-/* =========================================
-   PORTFOLIO CTA
-========================================= */
-
 .portfolio-cta {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-
-/* =========================================
-   TABLET
-========================================= */
 
 @media (max-width: 900px) {
 
@@ -4078,11 +3755,6 @@ input[type="range"]::-moz-range-thumb {
   }
 
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 768px) {
 
@@ -4156,11 +3828,6 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
 @media (max-width: 480px) {
 
   .portfolio-page-hero {
@@ -4206,10 +3873,6 @@ input[type="range"]::-moz-range-thumb {
   }
 
 }
-
-/* =========================================================
-   CAREERS PAGE STYLES
-========================================================= */
 
 .careers-hero {
   padding-top: 150px;
@@ -4302,7 +3965,6 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: 0.05em;
 }
 
-/* Culture & Values */
 .careers-values-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -4350,7 +4012,6 @@ input[type="range"]::-moz-range-thumb {
   color: #a0a0a0;
 }
 
-/* Perks Grid */
 .careers-perks-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4402,7 +4063,6 @@ input[type="range"]::-moz-range-thumb {
   line-height: 1.6;
 }
 
-/* Job Filters & Cards */
 .careers-filter-bar {
   display: flex;
   align-items: center;
@@ -4539,7 +4199,6 @@ input[type="range"]::-moz-range-thumb {
   color: #777777;
 }
 
-/* Application Form Box */
 .careers-apply-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -4683,7 +4342,6 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* --- Case Studies Section & Cases Page --- */
 .cases-section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -4845,7 +4503,6 @@ input[type="range"]::-moz-range-thumb {
   margin-top: 50px;
 }
 
-/* Dedicated Cases Page Styles */
 .cases-hero-section {
   padding-top: 170px;
   padding-bottom: 80px;
@@ -4944,5 +4601,98 @@ input[type="range"]::-moz-range-thumb {
   .case-metrics-row {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+/* =========================================
+   SMALL PORTFOLIO CARDS — FORCE OVERRIDE
+========================================= */
+
+.service-work-section .service-work-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.service-work-section .service-project-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+/* Smaller thumbnail */
+.service-work-section .service-project-image {
+  width: 100% !important;
+  height: 240px !important;
+  aspect-ratio: auto !important;
+  overflow: hidden !important;
+}
+
+.service-work-section .service-project-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Smaller card content */
+.service-work-section .service-project-content {
+  padding: 16px 18px !important;
+}
+
+.service-work-section .project-service {
+  font-size: 9px !important;
+  margin-bottom: 7px !important;
+}
+
+.service-work-section .service-project-content h4 {
+  font-size: 19px !important;
+  line-height: 1.2 !important;
+  margin: 0 0 7px !important;
+}
+
+.service-work-section .service-project-content p {
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  margin: 0 0 13px !important;
+}
+
+.service-work-section .project-link {
+  font-size: 11px !important;
+}
+
+/* Smaller Work heading spacing */
+.service-work-section .service-work-title {
+  margin-bottom: 20px !important;
+  padding-bottom: 12px !important;
+}
+
+.service-work-section .service-work-title h3 {
+  font-size: 24px !important;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .service-work-section .service-work-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .service-work-section .service-project-image {
+    height: 200px !important;
+  }
+
+  .service-work-section .service-project-content {
+    padding: 14px 16px !important;
+  }
+
+  .service-work-section .service-project-content h4 {
+    font-size: 18px !important;
+  }
+
 }
 

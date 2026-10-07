@@ -13,17 +13,14 @@
   >
   <meta name="author" content="Autopilot Media">
 
-  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autopilotmedia.in/careers.html">
   <meta property="og:title" content="Careers — Autopilot Media">
   <meta property="og:description" content="Build the future of D2C performance systems. Explore open positions in performance marketing, creative, web development, and AI operations.">
   <meta property="og:image" content="assets/logo.png">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
 
-  <!-- Typography (Google Fonts: Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -31,15 +28,210 @@
     rel="stylesheet"
   >
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    
+    .careers-banner-hero {
+      position: relative;
+      padding: 155px 0 95px 0;
+      text-align: center;
+      background: #08080c url('assets/careers-hero-bg.jpg') center center / cover no-repeat;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .careers-banner-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(5, 5, 8, 0.68) 0%, rgba(5, 5, 8, 0.94) 100%);
+    }
+    .careers-banner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .careers-page-title {
+      font-size: clamp(40px, 5.5vw, 58px);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .careers-breadcrumbs {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #888888;
+      font-weight: 500;
+    }
+    .careers-breadcrumbs a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .careers-breadcrumbs a:hover {
+      color: var(--lime);
+    }
+    .careers-breadcrumbs .crumb-sep {
+      color: #666666;
+    }
+    .careers-breadcrumbs .crumb-active {
+      color: var(--lime);
+      font-weight: 600;
+    }
+
+    .careers-intro-section {
+      padding: 70px 0 50px 0;
+      background: var(--black);
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .careers-intro-text {
+      max-width: 980px;
+      margin: 0 auto;
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #a8a8a8;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .latest-jobs-section {
+      padding: 65px 0 95px 0;
+      background: var(--black);
+    }
+    .latest-jobs-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .latest-jobs-title {
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .jobs-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .job-card-minimal {
+      background: #0f0f13;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 5px solid var(--lime);
+      border-radius: var(--radius-sm);
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .job-card-minimal:hover {
+      transform: translateY(-4px);
+      background: #141419;
+      border-color: rgba(200, 255, 0, 0.35);
+      border-left-color: var(--lime);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 25px rgba(200, 255, 0, 0.08);
+    }
+    .job-card-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .job-card-location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: #888888;
+      margin-bottom: 24px;
+    }
+    .job-card-location svg {
+      width: 15px;
+      height: 15px;
+      color: var(--lime);
+      flex-shrink: 0;
+    }
+    .job-apply-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      background: #191a22;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 10px 24px;
+      border-radius: var(--radius-xs);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .job-card-minimal:hover .job-apply-btn,
+    .job-apply-btn:hover {
+      background: var(--lime);
+      color: var(--black);
+      border-color: var(--lime);
+    }
+
+    .submit-resume-section {
+      padding: 90px 0 110px 0;
+      background: #08080b;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .submit-resume-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .submit-resume-title {
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .submit-resume-subtitle {
+      font-size: 15px;
+      color: #888888;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 991px) {
+      .jobs-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .careers-banner-hero {
+        padding: 130px 0 70px 0;
+      }
+    }
+    @media (max-width: 640px) {
+      .jobs-grid-3col {
+        grid-template-columns: 1fr;
+      }
+      .careers-banner-hero {
+        padding: 110px 0 55px 0;
+      }
+      .job-card-minimal {
+        min-height: auto;
+        padding: 24px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
   <header class="navbar" id="mainNavbar">
     <div class="container navbar-container">
       <a href="index.html" class="brand-logo" aria-label="Autopilot Media Homepage">
@@ -57,8 +249,7 @@
             </a>
             <div class="mega-menu" role="menu">
               <div class="mega-menu-grid">
-                
-                <!-- Column 1: Core Acquisition & Tech -->
+
                 <div class="mega-menu-col">
                   <div class="mega-col-header">
                     <span class="col-indicator"></span>
@@ -117,7 +308,6 @@
                   </a>
                 </div>
 
-                <!-- Column 2: Creative & Search Discovery -->
                 <div class="mega-menu-col">
                   <div class="mega-col-header">
                     <span class="col-indicator"></span>
@@ -179,7 +369,6 @@
                   </a>
                 </div>
 
-                <!-- Column 3: Automation & Funnels -->
                 <div class="mega-menu-col">
                   <div class="mega-col-header">
                     <span class="col-indicator"></span>
@@ -229,7 +418,6 @@
                     <span class="mega-card-arrow">→</span>
                   </a>
 
-                  <!-- Enterprise Custom Card -->
                   <a href="contact.html" class="mega-feature-card" role="menuitem">
                     <div>
                       <span class="mega-feature-badge">Custom Growth</span>
@@ -269,7 +457,6 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
   <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
     <ul class="mobile-nav-links">
       <li class="mobile-nav-item">
@@ -309,426 +496,139 @@
 
   <main id="mainContent">
 
-    <!-- =========================================================================
-         01. CAREERS HERO SECTION
-         ========================================================================= -->
-    <section class="section careers-hero section-dark" id="careersHero">
+    <section class="careers-banner-hero" id="careersHero">
       <div class="container">
-        <div class="careers-hero-content reveal">
-          <div class="eyebrow eyebrow-dark">
-            <span class="pulse-dot pulse-dot-green"></span>
-            <span>We Are Hiring • Join Our Core Team</span>
-          </div>
-
-          <h1 class="hero-title">
-            Build high-velocity <span class="highlight-pill">growth engines</span> with India's top performance team.
-          </h1>
-
-          <p class="careers-hero-description">
-            We partner with ambitious D2C brands to engineer full-funnel acquisition, algorithmic creative systems, and high-conversion commerce infrastructure. If you crave extreme ownership, empirical feedback loops, and rapid career acceleration, you belong here.
-          </p>
-
-          <div class="careers-hero-actions">
-            <a href="#open-roles" class="btn btn-primary btn-lg">
-              <span>View Open Roles</span>
-              <span class="arrow">↓</span>
-            </a>
-            <a href="https://wa.me/918851496899?text=Hi%20Nikhil,%20I'm%20interested%20in%20joining%20Autopilot%20Media!" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
-              <span>Fast-Track on WhatsApp</span>
-              <span class="arrow">→</span>
-            </a>
-          </div>
-
-          <!-- Quick Stats Bar -->
-          <div class="careers-stats-grid">
-            <div class="careers-stat-card">
-              <div class="careers-stat-number">₹100Cr+</div>
-              <div class="careers-stat-label">Tracked Client Scale</div>
-            </div>
-            <div class="careers-stat-card">
-              <div class="careers-stat-number">3.2x</div>
-              <div class="careers-stat-label">Avg. ROAS Growth</div>
-            </div>
-            <div class="careers-stat-card">
-              <div class="careers-stat-number">Top 1%</div>
-              <div class="careers-stat-label">Talent Density</div>
-            </div>
-            <div class="careers-stat-card">
-              <div class="careers-stat-number">Noida Hub</div>
-              <div class="careers-stat-label">Sector 63 • Hybrid</div>
-            </div>
-          </div>
+        <div class="careers-banner-content reveal">
+          <h1 class="careers-page-title">Careers</h1>
+          <nav class="careers-breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-active">Careers</span>
+          </nav>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         02. CULTURE & VALUES SECTION
-         ========================================================================= -->
-    <section class="section section-dark" id="culture" style="border-top: 1px solid var(--border-dark);">
+    <section class="careers-intro-section">
       <div class="container">
-        <div class="section-header text-center reveal">
-          <div class="eyebrow eyebrow-dark">
-            <span>The Autopilot Code</span>
-          </div>
-          <h2 class="section-title">
-            Built for people who hate <br><span class="highlight-pill">average agency busywork.</span>
-          </h2>
-          <p class="section-subtitle" style="max-width: 680px; margin: 0 auto; color: #888;">
-            We replaced bureaucratic red tape with raw speed, deep accountability, and an obsession with real revenue metrics.
+        <div class="reveal">
+          <p class="careers-intro-text">
+            Autopilot Media’s market leadership and industry reputation for excellence have been built and sustained over the years by a diverse team of exceptional professionals. Our workforce consists of individuals, experts in their fields, who are smart, ambitious, and passionate about their speciality. At Autopilot Media, you will contribute, learn, and grow while engineering high-performance growth systems for a global client base of top-tier brands across a range of industries. We value creativity, integrity, intelligence, and a flair for innovation. If you share these values, we'd like to hear from you.
           </p>
         </div>
-
-        <div class="careers-values-grid">
-          <!-- Value 1 -->
-          <div class="careers-value-card reveal">
-            <span class="careers-value-num">01 / OWNERSHIP</span>
-            <h3 class="careers-value-title">Extreme Ownership & High Agency</h3>
-            <p class="careers-value-desc">
-              You won't be treated like a cog executing orders. You own your campaigns, codebases, and creative briefs end-to-end. We judge output, commercial impact, and learning velocity — never hours logged on a chair.
-            </p>
-          </div>
-
-          <!-- Value 2 -->
-          <div class="careers-value-card reveal">
-            <span class="careers-value-num">02 / RIGOR</span>
-            <h3 class="careers-value-title">Marketing as an Engineering System</h3>
-            <p class="careers-value-desc">
-              Creative without analytics is pure noise. Analytics without creative is stagnant. We treat every marketing funnel like an optimization algorithm with statistical testing, structured variables, and clear attribution.
-            </p>
-          </div>
-
-          <!-- Value 3 -->
-          <div class="careers-value-card reveal">
-            <span class="careers-value-num">03 / SPEED</span>
-            <h3 class="careers-value-title">Direct Founder Access & Zero Red Tape</h3>
-            <p class="careers-value-desc">
-              Work directly with Nikhil Yadav and our founding partners daily. No layers of middle management filtering your ideas. Good ideas get funded and launched in hours, not weeks.
-            </p>
-          </div>
-
-          <!-- Value 4 -->
-          <div class="careers-value-card reveal">
-            <span class="careers-value-num">04 / UPSIDE</span>
-            <h3 class="careers-value-title">Uncapped Meritocracy & AI-Native Stack</h3>
-            <p class="careers-value-desc">
-              When our clients win big, you win big. We offer aggressive performance incentives, rapid career promotion cycles, and hands-on mastery of cutting-edge AI generation, automation, and workflow engines.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         03. PERKS & BENEFITS
-         ========================================================================= -->
-    <section class="section section-dark" id="perks" style="border-top: 1px solid var(--border-dark); background: #070707;">
+    <section class="latest-jobs-section" id="latestJobs">
       <div class="container">
-        <div class="section-header text-center reveal">
-          <div class="eyebrow eyebrow-dark">
-            <span>Benefits & Growth</span>
-          </div>
-          <h2 class="section-title">
-            Engineered to reward <span class="highlight-pill">high performance.</span>
-          </h2>
+        <div class="latest-jobs-header reveal">
+          <h2 class="latest-jobs-title">Latest Job</h2>
         </div>
 
-        <div class="careers-perks-grid">
-          <!-- Perk 1 -->
-          <div class="careers-perk-card reveal">
-            <div class="careers-perk-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h4 class="careers-perk-title">Performance Bonuses</h4>
-            <p class="careers-perk-desc">Direct profit-sharing and aggressive milestone bonuses tied to the ROAS and scale of campaigns you manage.</p>
-          </div>
+        <div class="jobs-grid-3col">
 
-          <!-- Perk 2 -->
-          <div class="careers-perk-card reveal">
-            <div class="careers-perk-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h4 class="careers-perk-title">Modern Hardware & Setup</h4>
-            <p class="careers-perk-desc">Ergonomic workstations, high-speed gear, multi-monitor setups, and premium workspace amenities at our Noida hub.</p>
-          </div>
-
-          <!-- Perk 3 -->
-          <div class="careers-perk-card reveal">
-            <div class="careers-perk-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h4 class="careers-perk-title">Learning & Tool Stipend</h4>
-            <p class="careers-perk-desc">100% reimbursed premium courses, books, and full access to best-in-class AI tools (ChatGPT Plus, Claude, Midjourney, n8n).</p>
-          </div>
-
-          <!-- Perk 4 -->
-          <div class="careers-perk-card reveal">
-            <div class="careers-perk-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h4 class="careers-perk-title">Top Founder Exposure</h4>
-            <p class="careers-perk-desc">Sit in high-stakes strategy reviews with D2C founders doing ₹1Cr - ₹20Cr+ ARR and build an elite industry network.</p>
-          </div>
-
-          <!-- Perk 5 -->
-          <div class="careers-perk-card reveal">
-            <div class="careers-perk-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h4 class="careers-perk-title">Flexible & Hybrid Work</h4>
-            <p class="careers-perk-desc">We respect deep work and autonomy with hybrid flexibility, outcome-focused schedules, and generous leave policies.</p>
-          </div>
-
-          <!-- Perk 6 -->
-          <div class="careers-perk-card reveal">
-            <div class="careers-perk-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <h4 class="careers-perk-title">Celebrations & Offsites</h4>
-            <p class="careers-perk-desc">Team milestone dinners, quarterly offsites, and an energetic environment that celebrates every record-breaking month.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         04. OPEN ROLES DIRECTORY
-         ========================================================================= -->
-    <section class="section section-dark" id="open-roles" style="border-top: 1px solid var(--border-dark);">
-      <div class="container">
-        <div class="section-header text-center reveal">
-          <div class="eyebrow eyebrow-dark">
-            <span class="pulse-dot pulse-dot-green"></span>
-            <span>Immediate Openings</span>
-          </div>
-          <h2 class="section-title">
-            Find your next <span class="highlight-pill">defining challenge.</span>
-          </h2>
-          <p class="section-subtitle" style="max-width: 650px; margin: 0 auto; color: #888;">
-            Select a role below to review the mission, requirements, and submit your direct application.
-          </p>
-
-          <!-- Filter Tabs -->
-          <div class="careers-filter-bar">
-            <button class="careers-filter-btn active" data-filter="all">All Openings (6)</button>
-            <button class="careers-filter-btn" data-filter="performance">Performance & Growth (2)</button>
-            <button class="careers-filter-btn" data-filter="creative">Creative & Video (1)</button>
-            <button class="careers-filter-btn" data-filter="tech">Engineering & Tech (2)</button>
-            <button class="careers-filter-btn" data-filter="growth">Client Operations (1)</button>
-          </div>
-        </div>
-
-        <div class="careers-roles-list">
-
-          <!-- Role 1: Senior Performance Marketer -->
-          <div class="careers-role-card reveal" data-category="performance">
-            <div class="role-header">
-              <div>
-                <h3 class="role-title">Senior Performance Marketing Manager (Meta & Google Ads)</h3>
-                <div class="role-badges">
-                  <span class="role-badge dept">Performance & Paid Media</span>
-                  <span class="role-badge">Full-Time</span>
-                  <span class="role-badge">Noida • Hybrid</span>
-                  <span class="role-badge">2 - 4 Years Exp</span>
-                </div>
+          <div class="job-card-minimal reveal">
+            <div>
+              <h3 class="job-card-title">Senior Performance Marketing Manager (Meta & Google) – Remote</h3>
+              <div class="job-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Noida / Remote, India</span>
               </div>
-              <a href="#apply" class="btn btn-primary btn-sm apply-trigger-btn" data-role="Senior Performance Marketing Manager">
-                <span>Apply for Role</span>
-                <span class="arrow">→</span>
-              </a>
             </div>
-            <div class="role-body">
-              <p>Take direct command of ₹30L to ₹1Cr+ monthly ad budgets across Meta Advantage+, Google Performance Max, and YouTube Ads for high-growth D2C brands.</p>
-              <ul class="role-highlights">
-                <li>Design, launch, and scale hyper-structured media buying architectures with daily budget pacing.</li>
-                <li>Collaborate with our creative studio to produce 15-20 new hook variations and angles per brand weekly.</li>
-                <li>Conduct cohort analyses, MER attribution, CAC:LTV modeling, and weekly strategic growth reviews with founders.</li>
-              </ul>
-            </div>
-            <div class="role-footer">
-              <span class="role-meta">Compensation: Competitive Fixed + Aggressive ROAS Performance Bonus</span>
-              <span class="role-meta">Apply deadline: Rolling Intake</span>
-            </div>
+            <a href="#submitResume" class="job-apply-btn apply-trigger-btn" data-role="Senior Performance Marketing Manager">Apply Now</a>
           </div>
 
-          <!-- Role 2: Junior Media Buyer -->
-          <div class="careers-role-card reveal" data-category="performance">
-            <div class="role-header">
-              <div>
-                <h3 class="role-title">Junior Media Buyer / Growth Associate</h3>
-                <div class="role-badges">
-                  <span class="role-badge dept">Performance & Paid Media</span>
-                  <span class="role-badge">Full-Time</span>
-                  <span class="role-badge">Noida Hub</span>
-                  <span class="role-badge">1 - 2 Years Exp / Ambitious Fresher</span>
-                </div>
+          <div class="job-card-minimal reveal">
+            <div>
+              <h3 class="job-card-title">Lead Shopify & Web Conversion Developer – Remote</h3>
+              <div class="job-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Noida / Remote, India</span>
               </div>
-              <a href="#apply" class="btn btn-primary btn-sm apply-trigger-btn" data-role="Junior Media Buyer / Growth Associate">
-                <span>Apply for Role</span>
-                <span class="arrow">→</span>
-              </a>
             </div>
-            <div class="role-body">
-              <p>Learn fast-track performance media buying under seasoned practitioners managing tens of lakhs in live ad spend weekly.</p>
-              <ul class="role-highlights">
-                <li>Handle campaign setup, naming conventions, UTM tracking, pixel integrations, and creative uploads.</li>
-                <li>Monitor live hourly metrics, identify ad fatigue early, and suggest creative iterations based on thumbstop rates.</li>
-                <li>Prepare clear, data-backed client reporting dashboards and learn advanced conversion optimization.</li>
-              </ul>
-            </div>
-            <div class="role-footer">
-              <span class="role-meta">Compensation: Fixed Salary + Fast Growth Milestones</span>
-              <span class="role-meta">Apply deadline: Immediate Hiring</span>
-            </div>
+            <a href="#submitResume" class="job-apply-btn apply-trigger-btn" data-role="Full-Stack Shopify & Web Conversion Developer">Apply Now</a>
           </div>
 
-          <!-- Role 3: Creative Strategist & UGC Director -->
-          <div class="careers-role-card reveal" data-category="creative">
-            <div class="role-header">
-              <div>
-                <h3 class="role-title">Creative Strategist & UGC Video Producer</h3>
-                <div class="role-badges">
-                  <span class="role-badge dept">Creative & Video Studio</span>
-                  <span class="role-badge">Full-Time</span>
-                  <span class="role-badge">Noida • Hybrid</span>
-                  <span class="role-badge">2 - 3 Years Exp</span>
-                </div>
+          <div class="job-card-minimal reveal">
+            <div>
+              <h3 class="job-card-title">Associate Creative Strategist & UGC Video Producer – Hybrid</h3>
+              <div class="job-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Sector 63, Noida</span>
               </div>
-              <a href="#apply" class="btn btn-primary btn-sm apply-trigger-btn" data-role="Creative Strategist & UGC Video Producer">
-                <span>Apply for Role</span>
-                <span class="arrow">→</span>
-              </a>
             </div>
-            <div class="role-body">
-              <p>Bridge the gap between raw creative imagination and high-converting performance data. You will architect the scripts and hooks that turn viewers into buyers.</p>
-              <ul class="role-highlights">
-                <li>Analyze competitor ad libraries, viral trends, customer review sentiment, and objections to write winning ad briefs.</li>
-                <li>Direct and manage our network of UGC creators, influencers, and internal video editors.</li>
-                <li>Review first 3-second retention graphs, iterate on hooks, voiceovers, and visual pacing to drive down cost-per-click.</li>
-              </ul>
-            </div>
-            <div class="role-footer">
-              <span class="role-meta">Compensation: Fixed Salary + Creative Win Bonuses</span>
-              <span class="role-meta">Location: Sector 63, Noida</span>
-            </div>
+            <a href="#submitResume" class="job-apply-btn apply-trigger-btn" data-role="Creative Strategist & UGC Video Producer">Apply Now</a>
           </div>
 
-          <!-- Role 4: Full-Stack Shopify Developer -->
-          <div class="careers-role-card reveal" data-category="tech">
-            <div class="role-header">
-              <div>
-                <h3 class="role-title">Full-Stack Shopify & Web Conversion Developer</h3>
-                <div class="role-badges">
-                  <span class="role-badge dept">Engineering & CRO</span>
-                  <span class="role-badge">Full-Time</span>
-                  <span class="role-badge">Noida • Hybrid</span>
-                  <span class="role-badge">2 - 4 Years Exp</span>
-                </div>
+          <div class="job-card-minimal reveal">
+            <div>
+              <h3 class="job-card-title">AI Automation & Operations Engineer – Remote</h3>
+              <div class="job-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Remote, India</span>
               </div>
-              <a href="#apply" class="btn btn-primary btn-sm apply-trigger-btn" data-role="Full-Stack Shopify & Web Conversion Developer">
-                <span>Apply for Role</span>
-                <span class="arrow">→</span>
-              </a>
             </div>
-            <div class="role-body">
-              <p>Build sub-2-second, high-converting eCommerce experiences and custom landing pages that dramatically boost visitor-to-customer conversion rates.</p>
-              <ul class="role-highlights">
-                <li>Develop custom Liquid themes, Shopify 2.0 sections, and performant headless landing pages.</li>
-                <li>Optimize Core Web Vitals, mobile UX, custom upsell/bundle funnels, and checkout flows.</li>
-                <li>Implement robust server-side GTM, Meta Conversions API (CAPI), and custom tracking events with zero data loss.</li>
-              </ul>
-            </div>
-            <div class="role-footer">
-              <span class="role-meta">Tech Stack: Liquid, JavaScript, HTML5/CSS3, Tailwind/Vanilla, Node, Shopify APIs</span>
-              <span class="role-meta">Status: Active Hiring</span>
-            </div>
+            <a href="#submitResume" class="job-apply-btn apply-trigger-btn" data-role="AI Automation & Operations Engineer">Apply Now</a>
           </div>
 
-          <!-- Role 5: AI Automation & Ops Engineer -->
-          <div class="careers-role-card reveal" data-category="tech">
-            <div class="role-header">
-              <div>
-                <h3 class="role-title">AI Automation & Operations Engineer</h3>
-                <div class="role-badges">
-                  <span class="role-badge dept">Engineering & AI</span>
-                  <span class="role-badge">Full-Time</span>
-                  <span class="role-badge">Noida / Remote Friendly</span>
-                  <span class="role-badge">1 - 3 Years Exp</span>
-                </div>
+          <div class="job-card-minimal reveal">
+            <div>
+              <h3 class="job-card-title">Senior Social Media & Content Growth Lead – Remote</h3>
+              <div class="job-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Noida / Remote, India</span>
               </div>
-              <a href="#apply" class="btn btn-primary btn-sm apply-trigger-btn" data-role="AI Automation & Operations Engineer">
-                <span>Apply for Role</span>
-                <span class="arrow">→</span>
-              </a>
             </div>
-            <div class="role-body">
-              <p>Turn manual operations into autonomous software systems. Build automated client data syncs, intelligent scraping bots, and AI reporting agents.</p>
-              <ul class="role-highlights">
-                <li>Architect scalable automations using n8n, Make, Python, and modern LLM APIs (OpenAI, Claude, Gemini).</li>
-                <li>Automate multi-channel ad spend extraction into centralized real-time Google Sheets & client dashboards.</li>
-                <li>Deploy internal AI agents for customer support, lead qualification, and automatic creative resizing pipelines.</li>
-              </ul>
-            </div>
-            <div class="role-footer">
-              <span class="role-meta">Tech: Python, n8n, REST APIs, Webhooks, LLM Tooling</span>
-              <span class="role-meta">Status: Immediate Opening</span>
-            </div>
+            <a href="#submitResume" class="job-apply-btn apply-trigger-btn" data-role="Junior Media Buyer / Growth Associate">Apply Now</a>
           </div>
 
-          <!-- Role 6: Client Growth Partner -->
-          <div class="careers-role-card reveal" data-category="growth">
-            <div class="role-header">
-              <div>
-                <h3 class="role-title">Client Growth Partner / Strategic Account Lead</h3>
-                <div class="role-badges">
-                  <span class="role-badge dept">Growth & Client Ops</span>
-                  <span class="role-badge">Full-Time</span>
-                  <span class="role-badge">Noida Hub</span>
-                  <span class="role-badge">2 - 4 Years Exp</span>
-                </div>
+          <div class="job-card-minimal reveal">
+            <div>
+              <h3 class="job-card-title">Client Growth Partner & Strategic Account Lead – Hybrid</h3>
+              <div class="job-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Sector 63, Noida</span>
               </div>
-              <a href="#apply" class="btn btn-primary btn-sm apply-trigger-btn" data-role="Client Growth Partner / Strategic Account Lead">
-                <span>Apply for Role</span>
-                <span class="arrow">→</span>
-              </a>
             </div>
-            <div class="role-body">
-              <p>Act as the executive commercial advisor and trusted co-pilot for our tier-1 D2C founder clients. Align agency execution directly with client business P&Ls.</p>
-              <ul class="role-highlights">
-                <li>Lead weekly growth sprint meetings, monthly strategy roadmaps, and quarterly business reviews.</li>
-                <li>Coordinate between performance media buyers, creative designers, and developers to ensure sprint deliverables ship on time.</li>
-                <li>Diagnose operational bottlenecks, inventory constraints, and unlock new channel expansion opportunities.</li>
-              </ul>
-            </div>
-            <div class="role-footer">
-              <span class="role-meta">Compensation: Fixed Salary + Client Retention Bonuses</span>
-              <span class="role-meta">Status: Active Hiring</span>
-            </div>
+            <a href="#submitResume" class="job-apply-btn apply-trigger-btn" data-role="Client Growth Partner / Strategic Account Lead">Apply Now</a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         05. APPLICATION FORM SECTION
-         ========================================================================= -->
-    <section class="section section-dark" id="apply" style="border-top: 1px solid var(--border-dark); background: #060606;">
+    <section class="submit-resume-section" id="submitResume">
       <div class="container">
-        <div class="section-header text-center reveal">
-          <div class="eyebrow eyebrow-dark">
+        <div class="submit-resume-header text-center reveal">
+          <div class="eyebrow eyebrow-dark" style="margin-bottom: 12px;">
             <span>Fast-Track Application</span>
           </div>
-          <h2 class="section-title">
-            Take the leap. <span class="highlight-pill">Apply in 60 seconds.</span>
-          </h2>
-          <p class="section-subtitle" style="max-width: 620px; margin: 0 auto; color: #888;">
-            No 10-page cover letters. Send us your work, your story, and how you want to create impact.
+          <h2 class="submit-resume-title">Submit Your Resume</h2>
+          <p class="submit-resume-subtitle">
+            Send us your portfolio, resume link, and background. Our founding team reviews every application.
           </p>
         </div>
 
         <div class="careers-apply-grid">
-          <!-- Form Card -->
+          
           <div class="careers-form-card reveal">
             <form id="careersForm" onsubmit="handleCareerSubmit(event)">
               <div class="careers-form-row">
@@ -752,10 +652,10 @@
                   <select id="applicantRole" class="careers-select" required>
                     <option value="">Select a position...</option>
                     <option value="Senior Performance Marketing Manager">Senior Performance Marketing Manager (Meta & Google)</option>
-                    <option value="Junior Media Buyer / Growth Associate">Junior Media Buyer / Growth Associate</option>
-                    <option value="Creative Strategist & UGC Video Producer">Creative Strategist & UGC Video Producer</option>
                     <option value="Full-Stack Shopify & Web Conversion Developer">Full-Stack Shopify & Web Conversion Developer</option>
+                    <option value="Creative Strategist & UGC Video Producer">Creative Strategist & UGC Video Producer</option>
                     <option value="AI Automation & Operations Engineer">AI Automation & Operations Engineer</option>
+                    <option value="Junior Media Buyer / Growth Associate">Senior Social Media & Content Growth Lead</option>
                     <option value="Client Growth Partner / Strategic Account Lead">Client Growth Partner / Account Lead</option>
                     <option value="General / Open Application">Other / General Talent Pool Application</option>
                   </select>
@@ -773,32 +673,31 @@
                   </select>
                 </div>
                 <div class="careers-form-group">
-                  <label for="applicantPortfolio" class="careers-label">Portfolio / LinkedIn / GitHub URL *</label>
-                  <input type="url" id="applicantPortfolio" class="careers-input" placeholder="https://linkedin.com/in/... or drive link" required>
+                  <label for="applicantPortfolio" class="careers-label">Resume Link / Portfolio / LinkedIn *</label>
+                  <input type="url" id="applicantPortfolio" class="careers-input" placeholder="Google Drive, Notion, or LinkedIn link" required>
                 </div>
               </div>
 
               <div class="careers-form-group">
-                <label for="applicantNote" class="careers-label">Tell Us About Something Remarkable You Built / Scaled</label>
-                <textarea id="applicantNote" class="careers-textarea" rows="4" placeholder="Briefly share a campaign you managed, an app you built, or why you want to join Autopilot Media..."></textarea>
+                <label for="applicantNote" class="careers-label">Tell Us About Your Work & Experience</label>
+                <textarea id="applicantNote" class="careers-textarea" rows="4" placeholder="Briefly share projects you managed, results delivered, or why you want to join Autopilot Media..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: 10px;">
-                <span id="submitBtnText">Submit Application</span>
+              <button type="submit" id="careerSubmitBtn" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: 10px;">
+                <span id="submitBtnText">Submit Your Resume</span>
                 <span class="arrow">→</span>
               </button>
 
               <div id="formSuccessMessage" style="display: none; margin-top: 20px; padding: 16px; background: rgba(200, 255, 0, 0.12); border: 1px solid var(--lime); border-radius: var(--radius-sm); color: var(--lime); font-size: 14px; text-align: center;">
-                ✓ Application received! Our founding team reviews submissions daily and will reach out via WhatsApp/Email within 24-48 hours.
+                ✓ Resume received! Our founding team reviews submissions daily and will reach out via WhatsApp/Email within 24-48 hours.
               </div>
             </form>
           </div>
 
-          <!-- Direct Contact Card -->
           <div class="careers-direct-card reveal">
             <div>
               <h3 style="font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px;">Prefer direct conversation?</h3>
-              <p style="font-size: 14px; color: #888; line-height: 1.6;">Skip the form and reach out directly to the founders. We respond to every serious candidate.</p>
+              <p style="font-size: 14px; color: #888; line-height: 1.6;">Skip the form and reach out directly to the founders. We review every serious candidate.</p>
             </div>
 
             <div class="careers-direct-item">
@@ -808,7 +707,7 @@
               <div class="careers-direct-info">
                 <h4>Email Resume Directly</h4>
                 <p><a href="mailto:careers@autopilotmedia.in">careers@autopilotmedia.in</a></p>
-                <p style="font-size: 12px; color: #666; margin-top: 2px;">cc: info@autopilotmedia.in</p>
+                <p style="font-size: 12px; color: #666; margin-top: 2px;">cc: autopilotmedia.team@gmail.com</p>
               </div>
             </div>
 
@@ -833,16 +732,6 @@
                 <p style="font-size: 13px; color: #777;">Noida, Uttar Pradesh 201301</p>
               </div>
             </div>
-
-            <!-- Founders Note Card -->
-            <div style="padding: 20px; background: rgba(255, 255, 255, 0.03); border: 1px dashed rgba(255, 255, 255, 0.1); border-radius: var(--radius-sm); margin-top: 10px;">
-              <p style="font-size: 13px; color: #b0b0b0; font-style: italic; line-height: 1.6;">
-                "We don't care about fancy pedigree or buzzwords. We care about proof of work, intellectual curiosity, and your drive to build extraordinary commercial systems."
-              </p>
-              <div style="font-size: 12px; font-weight: 700; color: var(--lime); margin-top: 8px;">
-                — Nikhil Yadav, Founder & Growth Architect
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -850,13 +739,10 @@
 
   </main>
 
-  <!-- =========================================================================
-       12. FOOTER (DARK)
-       ========================================================================= -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-top">
-        <!-- Brand Column -->
+        
         <div class="footer-brand">
           <div class="footer-logo">
             <img src="assets/logo.png" alt="Autopilot Media Logo" width="180" height="34">
@@ -866,7 +752,6 @@
           </p>
         </div>
 
-        <!-- Navigation Links -->
         <div>
           <h3 class="footer-col-title">Navigation</h3>
           <ul class="footer-links">
@@ -880,7 +765,6 @@
           </ul>
         </div>
 
-        <!-- Social Channels -->
         <div>
           <h3 class="footer-col-title">Connect</h3>
           <ul class="footer-links">
@@ -890,7 +774,6 @@
           </ul>
         </div>
 
-        <!-- Direct Contact -->
         <div>
           <h3 class="footer-col-title">Direct Contact</h3>
           <div class="footer-contact-item">
@@ -920,32 +803,10 @@
     </div>
   </footer>
 
-  <!-- Vanilla JavaScript Logic -->
   <script src="script.js"></script>
 
-  <!-- Careers Specific Interactive Logic -->
   <script>
-    // 1. Role Filter Logic
-    const filterButtons = document.querySelectorAll('.careers-filter-btn');
-    const roleCards = document.querySelectorAll('.careers-role-card');
 
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.getAttribute('data-filter');
-        roleCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // 2. Auto-select Role on "Apply for Role" Click
     const applyButtons = document.querySelectorAll('.apply-trigger-btn');
     const roleSelect = document.getElementById('applicantRole');
     const nameInput = document.getElementById('applicantName');
@@ -962,24 +823,56 @@
           }
           setTimeout(() => {
             if (nameInput) nameInput.focus();
-          }, 400);
+          }, 450);
         }
       });
     });
 
-    // 3. Application Form Submit Handling
-    function handleCareerSubmit(event) {
+    async function handleCareerSubmit(event) {
       event.preventDefault();
+      const submitBtn = document.getElementById('careerSubmitBtn');
       const submitBtnText = document.getElementById('submitBtnText');
       const successMsg = document.getElementById('formSuccessMessage');
 
-      if (submitBtnText) submitBtnText.textContent = 'Submitting...';
+      const name = document.getElementById('applicantName').value.trim();
+      const email = document.getElementById('applicantEmail').value.trim();
+      const phone = document.getElementById('applicantPhone').value.trim();
+      const role = document.getElementById('applicantRole').value;
+      const exp = document.getElementById('applicantExp').value;
+      const portfolio = document.getElementById('applicantPortfolio').value.trim();
+      const note = document.getElementById('applicantNote').value.trim();
 
-      setTimeout(() => {
-        if (submitBtnText) submitBtnText.textContent = 'Application Submitted ✓';
+      if (submitBtnText) submitBtnText.textContent = 'Submitting Resume...';
+      if (submitBtn) submitBtn.disabled = true;
+
+      const payload = {
+        name: name,
+        email: email,
+        company: "Applicant (Phone: " + phone + ")",
+        service: "Job Application: " + role,
+        budget: "Experience: " + exp + " yrs",
+        message: "Portfolio/Resume Link: " + portfolio + "\n\nNote: " + note,
+        submittedAt: new Date().toISOString()
+      };
+
+      try {
+        await fetch("https://script.google.com/macros/s/AKfycby-T-ms1SRyxEuhNpShBAIE70VgcyJqKrEx3Rj0B_Eq3KQyIJWiwlstubklGUcIU_tG/exec", {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.warn('Network submission notice:', err);
+      } finally {
+        if (submitBtnText) submitBtnText.textContent = 'Resume Submitted ✓';
         if (successMsg) successMsg.style.display = 'block';
         document.getElementById('careersForm').reset();
-      }, 700);
+        setTimeout(() => {
+          if (submitBtn) submitBtn.disabled = false;
+          if (submitBtnText) submitBtnText.textContent = 'Submit Your Resume';
+        }, 5000);
+      }
     }
   </script>
 </body>

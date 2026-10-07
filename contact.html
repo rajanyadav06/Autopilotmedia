@@ -23,12 +23,7 @@
 
 </head>
 
-
 <body>
-
-  <!-- =========================
-       NAVBAR
-  ========================== -->
 
   <header class="navbar" id="mainNavbar">
 
@@ -39,7 +34,6 @@
         <img src="assets/logo.png" alt="Autopilot Media Logo" width="180" height="34">
 
       </a>
-
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-menu">
@@ -54,7 +48,6 @@
             <div class="mega-menu" role="menu">
               <div class="mega-menu-grid">
 
-                <!-- Column 1: Core Acquisition & Tech -->
                 <div class="mega-menu-col">
                   <div class="mega-col-header">
                     <span class="col-indicator"></span>
@@ -116,7 +109,6 @@
                   </a>
                 </div>
 
-                <!-- Column 2: Creative & Search Discovery -->
                 <div class="mega-menu-col">
                   <div class="mega-col-header">
                     <span class="col-indicator"></span>
@@ -181,7 +173,6 @@
                   </a>
                 </div>
 
-                <!-- Column 3: Automation & Funnels (2 + Enterprise Feature) -->
                 <div class="mega-menu-col">
                   <div class="mega-col-header">
                     <span class="col-indicator"></span>
@@ -233,7 +224,6 @@
                     <span class="mega-card-arrow">→</span>
                   </a>
 
-                  <!-- Enterprise Custom Card -->
                   <a href="contact.html" class="mega-feature-card" role="menuitem">
                     <div>
                       <span class="mega-feature-badge">Custom Growth</span>
@@ -283,14 +273,12 @@
         </ul>
       </nav>
 
-
       <div class="nav-cta">
 
         <a href="contact.html" class="btn btn-primary btn-sm">
           <span>Talk to Expert</span>
           <span class="arrow">→</span>
         </a>
-
 
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
 
@@ -305,11 +293,6 @@
     </div>
 
   </header>
-
-
-  <!-- =========================
-       MOBILE MENU
-  ========================== -->
 
   <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
 
@@ -370,7 +353,6 @@
       </li>
     </ul>
 
-
     <div class="mobile-nav-footer">
 
       <a href="https://wa.me/918851496899" target="_blank" rel="noopener" class="btn btn-primary btn-lg mobile-link">
@@ -386,13 +368,7 @@
 
   </div>
 
-
   <main>
-
-
-    <!-- =========================
-         CONTACT HERO
-    ========================== -->
 
     <section class="section contact-page-hero section-dark">
 
@@ -408,7 +384,6 @@
 
           </div>
 
-
           <h1 class="hero-title">
 
             Let's build your
@@ -418,7 +393,6 @@
             </span>
 
           </h1>
-
 
           <p class="hero-description">
 
@@ -433,19 +407,11 @@
 
     </section>
 
-
-    <!-- =========================
-         CONTACT CONTENT
-    ========================== -->
-
     <section class="section section-light contact-section">
 
       <div class="container">
 
         <div class="contact-grid">
-
-
-          <!-- CONTACT INFORMATION -->
 
           <div class="contact-info reveal">
 
@@ -465,9 +431,7 @@
 
             </p>
 
-
             <div class="contact-details">
-
 
               <div class="contact-detail-item">
 
@@ -489,7 +453,6 @@
 
               </div>
 
-
               <div class="contact-detail-item">
 
                 <div class="contact-detail-icon">
@@ -509,7 +472,6 @@
                 </div>
 
               </div>
-
 
               <div class="contact-detail-item">
 
@@ -531,7 +493,6 @@
 
               </div>
 
-
               <div class="contact-detail-item">
 
                 <div class="contact-detail-icon">
@@ -552,17 +513,13 @@
 
               </div>
 
-
             </div>
 
           </div>
 
-
-          <!-- CONTACT FORM -->
-
           <div class="contact-form-wrapper reveal">
 
-            <form class="contact-form" action="mailto:info@autopilotmedia.in" method="post" enctype="text/plain">
+            <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
 
               <div class="form-row">
 
@@ -576,7 +533,6 @@
 
                 </div>
 
-
                 <div class="form-group">
 
                   <label for="email">
@@ -589,7 +545,6 @@
 
               </div>
 
-
               <div class="form-group">
 
                 <label for="company">
@@ -599,7 +554,6 @@
                 <input type="text" id="company" name="Company" placeholder="Your company name">
 
               </div>
-
 
               <div class="form-group">
 
@@ -645,6 +599,41 @@
 
               </div>
 
+              <div class="form-group">
+
+                <label for="budget">
+                  Price Range / Budget
+                </label>
+
+                <select id="budget" name="Budget">
+
+                  <option value="">
+                    Select price range
+                  </option>
+
+                  <option value="Under ₹1 Lakh">
+                    Under ₹1 Lakh
+                  </option>
+
+                  <option value="₹1 Lakh – ₹3 Lakhs">
+                    ₹1 Lakh – ₹3 Lakhs
+                  </option>
+
+                  <option value="₹3 Lakhs – ₹10 Lakhs">
+                    ₹3 Lakhs – ₹10 Lakhs
+                  </option>
+
+                  <option value="₹10 Lakhs – ₹25 Lakhs">
+                    ₹10 Lakhs – ₹25 Lakhs
+                  </option>
+
+                  <option value="₹25 Lakhs+ (Scale)">
+                    ₹25 Lakhs+ (Enterprise / Scale)
+                  </option>
+
+                </select>
+
+              </div>
 
               <div class="form-group">
 
@@ -657,10 +646,9 @@
 
               </div>
 
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-lg form-submit">
 
-              <button type="submit" class="btn btn-primary btn-lg form-submit">
-
-                <span>
+                <span id="contactSubmitText">
                   Send Inquiry
                 </span>
 
@@ -670,6 +658,7 @@
 
               </button>
 
+              <div id="contactFormStatus" style="display: none; margin-top: 18px; padding: 14px 18px; border-radius: var(--radius-sm); font-size: 14px; text-align: center; line-height: 1.5;"></div>
 
             </form>
 
@@ -681,15 +670,7 @@
 
     </section>
 
-
-
-
   </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
 
   <footer class="footer">
 
@@ -711,7 +692,6 @@
           </p>
 
         </div>
-
 
         <div>
 
@@ -753,8 +733,6 @@
 
         </div>
 
-
-        <!-- Social Channels -->
         <div>
 
           <h3 class="footer-col-title">
@@ -786,7 +764,6 @@
 
         </div>
 
-
         <div>
 
           <h3 class="footer-col-title">
@@ -812,7 +789,6 @@
         </div>
 
       </div>
-
 
       <div class="footer-bottom">
 
@@ -842,9 +818,81 @@
 
   </footer>
 
-
   <script src="script.js"></script>
+  <script>
 
+    const GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycby-T-ms1SRyxEuhNpShBAIE70VgcyJqKrEx3Rj0B_Eq3KQyIJWiwlstubklGUcIU_tG/exec";
+
+    async function handleContactSubmit(event) {
+      event.preventDefault();
+
+      const submitBtn = document.getElementById('contactSubmitBtn');
+      const submitText = document.getElementById('contactSubmitText');
+      const statusBox = document.getElementById('contactFormStatus');
+      const form = document.getElementById('contactForm');
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const service = document.getElementById('service').value;
+      const budget = document.getElementById('budget').value;
+      const message = document.getElementById('message').value.trim();
+
+      submitBtn.disabled = true;
+      const originalText = submitText.textContent;
+      submitText.textContent = 'Sending Inquiry...';
+      statusBox.style.display = 'none';
+
+      if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
+        statusBox.style.display = 'block';
+        statusBox.style.background = 'rgba(255, 170, 0, 0.12)';
+        statusBox.style.border = '1px solid #ffaa00';
+        statusBox.style.color = '#ffaa00';
+        statusBox.innerHTML = '⚠️ Setup required: Please paste your deployed Google Apps Script Web App URL into <code>GOOGLE_SHEET_WEB_APP_URL</code> in <code>contact.html</code>.';
+        submitBtn.disabled = false;
+        submitText.textContent = originalText;
+        return;
+      }
+
+      const payload = {
+        name: name,
+        email: email,
+        company: company,
+        service: service,
+        budget: budget,
+        message: message,
+        submittedAt: new Date().toISOString()
+      };
+
+      try {
+        await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        statusBox.style.display = 'block';
+        statusBox.style.background = 'rgba(200, 255, 0, 0.12)';
+        statusBox.style.border = '1px solid var(--lime, #c8ff00)';
+        statusBox.style.color = 'var(--lime, #c8ff00)';
+        statusBox.innerHTML = '✓ Inquiry received! Our team will review your business and get back to you within 24 hours.';
+
+        form.reset();
+      } catch (err) {
+        console.error('Submission error:', err);
+        statusBox.style.display = 'block';
+        statusBox.style.background = 'rgba(255, 77, 77, 0.12)';
+        statusBox.style.border = '1px solid #ff4d4d';
+        statusBox.style.color = '#ff4d4d';
+        statusBox.innerHTML = '⚠️ Submission error. Please connect with us directly on WhatsApp: <a href="https://wa.me/918851496899" target="_blank" style="color: #fff; text-decoration: underline;">+91 8851496899</a>';
+      } finally {
+        submitBtn.disabled = false;
+        submitText.textContent = originalText;
+      }
+    }
+  </script>
 </body>
-
 </html>

@@ -72,11 +72,6 @@
       margin: auto;
     }
 
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
     .navbar {
       position: fixed;
       top: 0;
@@ -159,9 +154,6 @@
       width: 100%;
     }
 
-    /* ==========================================================================
-       Mega Menu & Dropdown Navigation Styles
-       ========================================================================== */
     .nav-item-dropdown {
       position: static;
     }
@@ -195,7 +187,6 @@
       width: 100%;
     }
 
-    /* Floating Mega Menu Container */
     .mega-menu {
       position: absolute;
       top: calc(100% + 4px);
@@ -219,7 +210,6 @@
       z-index: 1050;
     }
 
-    /* Bridge gap between navbar and mega menu so hover never drops */
     .mega-menu::before {
       content: '';
       position: absolute;
@@ -240,7 +230,6 @@
       transition-delay: 0s;
     }
 
-    /* 3-Column Grid Layout (3 / 3 / 2) */
     .mega-menu-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -276,7 +265,6 @@
       box-shadow: 0 0 6px var(--lime);
     }
 
-    /* Service Item Card */
     .mega-menu-card {
       display: flex;
       align-items: flex-start;
@@ -373,7 +361,6 @@
       transform: translateX(0);
     }
 
-    /* Enterprise Growth Highlight Card in Col 3 */
     .mega-feature-card {
       padding: 12px 14px;
       border-radius: 10px;
@@ -436,7 +423,6 @@
       gap: 4px;
     }
 
-    /* Mobile Accordion & Submenu */
     .mobile-dropdown-toggle {
       width: 100%;
       display: flex;
@@ -600,7 +586,6 @@
       background-color: var(--lime);
     }
 
-    /* Mobile Nav Drawer */
     .mobile-nav-drawer {
       position: fixed;
       top: 0;
@@ -647,11 +632,6 @@
       flex-direction: column;
       gap: 16px;
     }
-
-
-    /* =========================
-       HERO
-    ========================= */
 
     .hero {
       min-height: 75vh;
@@ -714,11 +694,6 @@
       font-size: 17px;
       line-height: 1.7;
     }
-
-
-    /* =========================
-       TOOLS
-    ========================= */
 
     .tools-section {
       padding: 100px 0;
@@ -818,11 +793,6 @@
       background: #222;
     }
 
-
-    /* =========================
-       CALCULATOR
-    ========================= */
-
     .calculator-section {
       padding: 100px 0;
       background: var(--black);
@@ -908,11 +878,6 @@
       font-size: 12px;
     }
 
-
-    /* =========================
-       CTA
-    ========================= */
-
     .cta {
       padding: 100px 20px;
       background: var(--off-white);
@@ -931,11 +896,6 @@
       margin: auto auto 30px;
       color: #666;
     }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
 
     footer {
       padding: 50px 0;
@@ -958,11 +918,6 @@
       color: #777;
       font-size: 13px;
     }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media(max-width: 1024px) {
 
@@ -1040,8 +995,6 @@
       }
     }
 
-  
-/* Footer (Matching Home Page) */
 .footer {
   background-color: var(--black);
   color: var(--white);
@@ -1145,11 +1098,6 @@
 
 <body>
 
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
 <header class="navbar" id="mainNavbar">
 
   <div class="container navbar-container">
@@ -1175,8 +1123,7 @@
           </a>
           <div class="mega-menu" role="menu">
             <div class="mega-menu-grid">
-              
-              <!-- Column 1: Core Acquisition & Tech -->
+
               <div class="mega-menu-col">
                 <div class="mega-col-header">
                   <span class="col-indicator"></span>
@@ -1235,7 +1182,6 @@
                 </a>
               </div>
 
-              <!-- Column 2: Creative & Search Discovery -->
               <div class="mega-menu-col">
                 <div class="mega-col-header">
                   <span class="col-indicator"></span>
@@ -1297,7 +1243,6 @@
                 </a>
               </div>
 
-              <!-- Column 3: Automation & Funnels (2 + Enterprise Feature) -->
               <div class="mega-menu-col">
                 <div class="mega-col-header">
                   <span class="col-indicator"></span>
@@ -1347,7 +1292,6 @@
                   <span class="mega-card-arrow">→</span>
                 </a>
 
-                <!-- Enterprise Custom Card -->
                 <a href="contact.html" class="mega-feature-card" role="menuitem">
                   <div>
                     <span class="mega-feature-badge">Custom Growth</span>
@@ -1430,7 +1374,6 @@
 
 </header>
 
-<!-- Mobile Drawer Menu -->
 <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
   <ul class="mobile-nav-links">
     <li class="mobile-nav-item">
@@ -1467,11 +1410,6 @@
   </div>
 </div>
 
-
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero">
 
   <div class="container">
@@ -1496,11 +1434,6 @@
 
 </section>
 
-
-<!-- =========================
-     TOOLS
-========================= -->
-
 <section class="tools-section">
 
   <div class="container">
@@ -1519,11 +1452,7 @@
 
     </div>
 
-
     <div class="tools-grid">
-
-
-      <!-- TOOL 01 -->
 
       <div class="tool-card">
 
@@ -1553,9 +1482,6 @@
 
       </div>
 
-
-      <!-- TOOL 02 -->
-
       <div class="tool-card">
 
         <span class="tool-number">
@@ -1583,9 +1509,6 @@
         </button>
 
       </div>
-
-
-      <!-- TOOL 03 -->
 
       <div class="tool-card">
 
@@ -1621,11 +1544,6 @@
 
 </section>
 
-
-<!-- =========================
-     CALCULATOR
-========================= -->
-
 <section
   class="calculator-section"
   id="calculator"
@@ -1642,7 +1560,6 @@
       <p class="calculator-intro">
         Adjust the numbers below to estimate monthly revenue.
       </p>
-
 
       <div class="input-group">
 
@@ -1672,7 +1589,6 @@
 
       </div>
 
-
       <div class="input-group">
 
         <div class="input-header">
@@ -1700,7 +1616,6 @@
         >
 
       </div>
-
 
       <div class="input-group">
 
@@ -1730,7 +1645,6 @@
 
       </div>
 
-
       <div class="result">
 
         <div class="result-label">
@@ -1756,11 +1670,6 @@
   </div>
 
 </section>
-
-
-<!-- =========================
-     CTA
-========================= -->
 
 <section class="cta">
 
@@ -1791,16 +1700,10 @@
 
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-  <!-- Footer (Matching Home Page) -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-top">
-        <!-- Brand Column -->
+        
         <div class="footer-brand">
           <div class="footer-logo">
             <img src="assets/logo.png" alt="Autopilot Media Logo" width="180" height="34">
@@ -1810,7 +1713,6 @@
           </p>
         </div>
 
-        <!-- Navigation Links -->
         <div>
           <h3 class="footer-col-title">Navigation</h3>
           <ul class="footer-links">
@@ -1823,7 +1725,6 @@
           </ul>
         </div>
 
-        <!-- Social Channels -->
         <div>
           <h3 class="footer-col-title">Connect</h3>
           <ul class="footer-links">
@@ -1833,7 +1734,6 @@
           </ul>
         </div>
 
-        <!-- Direct Contact -->
         <div>
           <h3 class="footer-col-title">Direct Contact</h3>
           <div class="footer-contact-item">
@@ -1862,7 +1762,6 @@
       </div>
     </div>
   </footer>
-
 
 <script>
 
@@ -1948,11 +1847,6 @@
     });
   }
 
-
-  /* =========================
-     CALCULATOR
-  ========================= */
-
   const spend =
     document.getElementById("spend");
 
@@ -1974,7 +1868,6 @@
   const revenue =
     document.getElementById("revenue");
 
-
   function formatCurrency(value) {
 
     return new Intl.NumberFormat(
@@ -1987,7 +1880,6 @@
     ).format(value);
 
   }
-
 
   function calculateRevenue() {
 
@@ -2007,7 +1899,6 @@
       baseRevenue *
       (1 + improvement / 100);
 
-
     spendValue.textContent =
       formatCurrency(adSpend);
 
@@ -2021,7 +1912,6 @@
       formatCurrency(estimatedRevenue);
 
   }
-
 
   spend.addEventListener(
     "input",
@@ -2038,7 +1928,6 @@
     calculateRevenue
   );
 
-
   function showCalculator() {
 
     document
@@ -2048,7 +1937,6 @@
       });
 
   }
-
 
   calculateRevenue();
 
